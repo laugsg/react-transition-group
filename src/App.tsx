@@ -1,26 +1,23 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import {
+  Routes,
+  Route
+} from 'react-router-dom'
 
-function App() {
+import './styles/globals.css'
+
+// components
+import Home from './pages/Home';
+import Transition from './pages/transition';
+import CssTransition from './pages/csstransition';
+import SwitchTransition from './pages/switchtransition';
+
+export default function MainEntry() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Routes>
+      <Route path="/" element={<Home/>}/>
+      <Route path="/transition" element={<Transition/>}/>
+      <Route path="/csstransition" element={<CssTransition/>}/>
+      <Route path="/switchtransition" element={<SwitchTransition/>}/>
+    </Routes>
   );
 }
-
-export default App;
