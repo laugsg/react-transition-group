@@ -14,9 +14,9 @@ export function CssTransitionComponent() {
           classNames="my-node"
           unmountOnExit
           >
-          <div>
-            {"I'll receive my-node-* classes"}
-          </div>
+          <p>
+            I'll receive my-node-* classes
+          </p>
         </CSSTransition>
       <button type="button" onClick={() => setInProp(!inProp)}>
         Click to start transition

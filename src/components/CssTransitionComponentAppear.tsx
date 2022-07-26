@@ -12,11 +12,11 @@ export function CssTransitionComponentAppear() {
           in={true}
           timeout={500}
           classNames="my-node"
-          unmountOnExit
           appear={true}
+          unmountOnExit
           >
           <div>
-            {"I'll appear by my-node-appear class and appear prop"}
+            I'll appear by my-node-appear class and appear prop
           </div>
         </CSSTransition>
       </>

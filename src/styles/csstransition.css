@@ -1,3 +1,8 @@
+.my-node-appear {
+  opacity: 0;
+  transform: scale(0.9);
+  transition: opacity 300ms, transform 300ms;
+}
 .my-node-enter {
   opacity: 0;
   transform: scale(1.1);
@@ -15,9 +20,4 @@
   opacity: 0;
   transform: scale(0.9);
   transition: opacity 300ms, transform 300ms;
-}
-
-.my-node-appear {
-  opacity: 0;
-  transform: scale(1.1);
 }

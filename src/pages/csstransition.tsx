@@ -1,5 +1,7 @@
 import styles from "../styles/Home.module.css";
 
+import '../styles/csstransition.css'
+
 // components
 import { Navigation } from "../components/Navigation";
 import { CssTransitionComponent } from "../components/CssTransitionComponent";
