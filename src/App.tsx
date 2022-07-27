@@ -10,6 +10,7 @@ import Home from './pages/Home';
 import Transition from './pages/transition';
 import CssTransition from './pages/csstransition';
 import SwitchTransition from './pages/switchtransition';
+import TransitionGroup from './pages/transitiongroup';
 
 export default function MainEntry() {
   return (
@@ -18,6 +19,7 @@ export default function MainEntry() {
       <Route path="/transition" element={<Transition/>}/>
       <Route path="/csstransition" element={<CssTransition/>}/>
       <Route path="/switchtransition" element={<SwitchTransition/>}/>
+      <Route path="/transitiongroup" element={<TransitionGroup/>}/>
     </Routes>
   );
 }

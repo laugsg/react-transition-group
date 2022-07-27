@@ -9,6 +9,7 @@ export function Navigation(){
             <li style={{marginLeft:'1em'}}><Link to="/transition">Transition Component</Link></li>
             <li style={{marginLeft:'1em'}}><Link to="/csstransition">CSSTransition Component</Link></li>
             <li style={{marginLeft:'1em'}}><Link to="/switchtransition">SwitchTransition Component</Link></li>
+            <li style={{marginLeft:'1em'}}><Link to="/transitiongroup">TransitionGroup Component</Link></li>
         </ul>
     )
 }
