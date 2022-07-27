@@ -4,8 +4,6 @@ import { Transition } from "react-transition-group";
 const duration = 1300;
 
 const defaultStyle = {
-  transition: `opacity ${duration}ms ease-in-out`,
-  opacity: 0,
   padding: 20,
   display: "inline-block",
   backgroundColor: "blue",
@@ -13,8 +11,8 @@ const defaultStyle = {
 };
 
 const transitionStyles: any = {
-  entering: { opacity: 0 },
-  entered: { opacity: 1 },
+  entering: { opacity: 0, transition: `opacity ${duration}ms ease-in-out` },
+  entered: { opacity: 1, transition: `opacity ${duration}ms ease-in-out` },
 };
 
 const Fade = ({ children }: any) => {

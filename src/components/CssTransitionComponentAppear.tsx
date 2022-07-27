@@ -3,6 +3,10 @@ import { CSSTransition } from "react-transition-group";
 
 import '../styles/csstransition.css'
 
+/**
+ * CSS file should include two clasess *-appear & *-appear-active
+ */
+
 export function CssTransitionComponentAppear() {
   const [inProp, setInProp] = React.useState(false);
   return (

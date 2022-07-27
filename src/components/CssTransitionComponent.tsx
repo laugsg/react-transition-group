@@ -1,7 +1,7 @@
 import React from "react";
 import { CSSTransition } from "react-transition-group";
 
-import '../styles/csstransition.css'
+import styles from '../styles/csstransition.module.css'
 
 export function CssTransitionComponent() {
   const [inProp, setInProp] = React.useState(false);
@@ -11,7 +11,7 @@ export function CssTransitionComponent() {
         <CSSTransition
           in={inProp}
           timeout={500}
-          classNames="my-node"
+          classNames={{...styles}}
           unmountOnExit
           >
           <p>

@@ -1,7 +1,7 @@
 import React from "react";
 import { CSSTransition, SwitchTransition } from "react-transition-group";
 
-import '../styles/csstransition.css'
+import '../styles/switchtransition.css'
 
 export function SwitchTransitionComponent() {
   const [state, setState] = React.useState(false);
@@ -10,7 +10,12 @@ export function SwitchTransitionComponent() {
       <CSSTransition
         key={state ? "Goodbye, world!" : "Hello, world!"}
         addEndListener={(node, done) => node.addEventListener("transitionend", done, false)}
-        classNames='fade'
+        classNames={{
+          enter: 'fade-enter',
+          enterActive: 'fade-enter-active',
+          exit: 'fade-exit',
+          exitActive: 'fade-exit-active',
+        }} 
       >
         <button onClick={() => setState(state => !state)}>
           {state ? "Goodbye, out-in!" : "Hello, in-out!"}
