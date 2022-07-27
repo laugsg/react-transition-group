@@ -3,7 +3,7 @@ import { CSSTransition } from "react-transition-group";
 
 import styles from '../styles/csstransition.module.css'
 
-export function CssTransitionComponent() {
+export function CssTransitionContainer() {
   const [inProp, setInProp] = React.useState(false);
   return (
     <div>

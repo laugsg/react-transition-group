@@ -38,7 +38,7 @@ type handlerProps = {
   show: boolean;
 };
 
-export class FadeInContainerWithButton extends React.Component {
+export class TransitionContainer extends React.Component {
   state = { show: false };
 
   handleToggle() {

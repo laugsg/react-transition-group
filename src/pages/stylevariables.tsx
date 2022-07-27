@@ -1,11 +1,11 @@
 import styles from "../styles/Home.module.css";
-
+import { Link } from "react-router-dom";
 // components
-import { FadeInContainerWithoutButton } from "../components/FadeInContainerWithoutButton";
+import { TransitionContainerAppear } from "../components/TransitionContainerAppear";
 import { Navigation } from "../components/Navigation";
-import { CssTransitionComponentAppear } from "../components/CssTransitionComponentAppear";
-import { CssTransitionComponent } from "../components/CssTransitionComponent";
-import { SwitchTransitionComponent } from "../components/SwitchTransitionComponent";
+import { CssTransitionContainerAppear } from "../components/CssTransitionContainerAppear";
+import { CssTransitionContainer } from "../components/CssTransitionContainer";
+import { SwitchTransitionContainer } from "../components/SwitchTransitionContainer";
 
 export default function StyleVariables() {
   return (
@@ -73,7 +73,21 @@ export default function StyleVariables() {
             </pre>
           </code>
 
-          <FadeInContainerWithoutButton />
+          <p>
+            <small>
+              <i>Reload the page if you couldn't see the transition</i>
+            </small>
+          </p>
+
+          <div
+            style={{
+              border: "1px solid grey",
+              padding: "1rem",
+              maxWidth: "500px",
+            }}
+          >
+            <TransitionContainerAppear />
+          </div>
         </article>
 
         {/* Transition by default */}
@@ -113,12 +127,12 @@ export default function StyleVariables() {
           </code>
 
           <p>
-            An example could be found in the CssTransitionComponentAppear from
+            An example could be found in the CssTransitionContainerAppear from
             this documentation:
           </p>
           <ol>
             <li>In the csstransition.css file the classes are defined.</li>
-            <li>The file is imported into CssTransitionComponentAppear</li>
+            <li>The file is imported into CssTransitionContainerAppear</li>
             <li>
               The classNames prop is defined as{" "}
               <code>classNames="my-node"</code>
@@ -131,6 +145,12 @@ export default function StyleVariables() {
             this example.
           </p>
 
+          <p>
+            <small>
+              <i>Reload the page if you couldn't see the transition</i>
+            </small>
+          </p>
+
           <div
             style={{
               border: "1px solid grey",
@@ -138,7 +158,7 @@ export default function StyleVariables() {
               maxWidth: "500px",
             }}
           >
-            <CssTransitionComponentAppear />
+            <CssTransitionContainerAppear />
           </div>
         </article>
 
@@ -169,7 +189,7 @@ export default function StyleVariables() {
           </code>
 
           <p>
-            An example could be found in the CssTransitionComponent from this
+            An example could be found in the CssTransitionContainer from this
             documentation:
           </p>
           <ol>
@@ -198,16 +218,26 @@ export default function StyleVariables() {
               maxWidth: "500px",
             }}
           >
-            <CssTransitionComponent />
+            <CssTransitionContainer />
           </div>
 
-          <h5>Type for classNames</h5>
-          <p>
-            type: string | {"{"} appear?: string, appearActive?: string,
-            appearDone?: string, enter?: string, enterActive?: string,
-            enterDone?: string, exit?: string, exitActive?: string, exitDone?:
-            string, {"}"}
-          </p>
+          <h5 id="typesForClassNames</article>">Type for classNames</h5>
+          <code className={styles.code}>
+            <pre>
+              {`
+            type: string | { 
+              appear?: string, 
+              appearActive?: string,
+              enter?: string,
+              enterActive?: string,
+              enterDone?: string, 
+              exit?: string, 
+              exitActive?: string, 
+              exitDone?: string, 
+            }
+            `}
+            </pre>
+          </code>
         </article>
 
         <article className={styles.article}>
@@ -215,7 +245,8 @@ export default function StyleVariables() {
 
           <p>
             Each individual classNames can also be specified independently to
-            match specifically defined rules for transitions.
+            match specifically defined rules for transitions, pairing selectors
+            with Types for classNames.
           </p>
           <code className={styles.code}>
             <pre>
@@ -236,7 +267,7 @@ export default function StyleVariables() {
           </code>
 
           <p>
-            An example could be found in the SwitchTransitionComponent from this
+            An example could be found in the SwitchTransitionContainer from this
             documentation:
           </p>
           <ol>
@@ -257,7 +288,7 @@ export default function StyleVariables() {
               maxWidth: "500px",
             }}
           >
-            <SwitchTransitionComponent />
+            <SwitchTransitionContainer />
           </div>
         </article>
 
@@ -314,15 +345,22 @@ export default function StyleVariables() {
           </code>
 
           <p>
-            An example could be found in the FadeInContainerWithoutButton from this
+            An example could be found in the TransitionContainerAppear from this
             documentation:
           </p>
           <ol>
             <li>In transitionStyles var the states are paired</li>
             <li>
-              Then in the style prop is spreaded <code>transitionStyles[state]</code>
+              Then in the style prop is spreaded{" "}
+              <code>transitionStyles[state]</code>
             </li>
           </ol>
+
+          <p>
+            <small>
+              <i>Reload the page if you couldn't see the transition</i>
+            </small>
+          </p>
 
           <div
             style={{
@@ -331,7 +369,7 @@ export default function StyleVariables() {
               maxWidth: "500px",
             }}
           >
-            <FadeInContainerWithoutButton />
+            <TransitionContainerAppear />
           </div>
         </article>
       </main>

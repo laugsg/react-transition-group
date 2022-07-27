@@ -1,14 +1,13 @@
 import styles from "../styles/Home.module.css";
 
 // components
-import { FadeInContainerWithoutButton } from "../components/FadeInContainerWithoutButton";
-import { FadeInContainerWithButton } from "../components/FadeInContainerWithButton";
+import { TransitionContainerAppear } from "../components/TransitionContainerAppear";
+import { TransitionContainer } from "../components/TransitionContainer";
 import { Navigation } from "../components/Navigation";
 
 export default function Transition() {
   return (
     <div className={styles.container}>
-
       <Navigation />
 
       <main className={styles.main}>
@@ -46,7 +45,16 @@ export default function Transition() {
               <code>in</code> equal to <code>!state</code> after click
             </li>
           </ul>
-          <FadeInContainerWithButton />
+
+          <div
+            style={{
+              border: "1px solid grey",
+              padding: "1rem",
+              maxWidth: "500px",
+            }}
+          >
+            <TransitionContainer />
+          </div>
         </article>
 
         {/* Transition by default */}
@@ -63,7 +71,16 @@ export default function Transition() {
               <i>Reload the page if you couldn't see the transition</i>
             </small>
           </p>
-          <FadeInContainerWithoutButton />
+
+          <div
+            style={{
+              border: "1px solid grey",
+              padding: "1rem",
+              maxWidth: "500px",
+            }}
+          >
+            <TransitionContainerAppear />
+          </div>
         </article>
 
         <article className={styles.article}>

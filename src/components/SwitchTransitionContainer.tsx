@@ -3,7 +3,7 @@ import { CSSTransition, SwitchTransition } from "react-transition-group";
 
 import '../styles/switchtransition.css'
 
-export function SwitchTransitionComponent() {
+export function SwitchTransitionContainer() {
   const [state, setState] = React.useState(false);
   return (
     <SwitchTransition mode={state ? "out-in" : "in-out"}>

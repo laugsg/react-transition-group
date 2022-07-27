@@ -32,6 +32,6 @@ const Fade = ({ children }: any) => {
   );
 }
 
-export function FadeInContainerWithoutButton() {
+export function TransitionContainerAppear() {
   return <Fade>Transition by default</Fade>;
 }

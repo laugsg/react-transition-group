@@ -1,4 +1,5 @@
-import styles from '../styles/Home.module.css'
+import styles from "../styles/Home.module.css";
+import { Link } from "react-router-dom";
 
 // components
 import { Navigation } from "../components/Navigation";
@@ -6,7 +7,6 @@ import { Navigation } from "../components/Navigation";
 export default function Home() {
   return (
     <div className={styles.container}>
-
       <Navigation />
 
       <main className={styles.main}>
@@ -22,24 +22,59 @@ export default function Home() {
         <section>
           <h2>Conclusion</h2>
 
-          <p>
-            It provides Container Components to connect css rules with
-            components, manipulating the DOM along the repaint.
-          </p>
+          <section className={styles.article} style={{ marginBottom: "3rem" }}>
+            <p>
+              It provides Container Components to connect css rules with
+              components, manipulating the DOM along the repaint.
+            </p>
+            <p>
+              React Transition Group{" "}
+              <b>
+                <i>is not an animation library</i>
+              </b>
+              . Instead, it's compounded of certain components which allows to
+              apply css rules along the states it exposes.
+            </p>
+          </section>
 
           <p>
-            Then, the first and most important to know is React Transition Group
-            is not an animation library.
+            The <i>How-To's</i>
           </p>
-          <p>
-            Instead, it's compounded of certain components requiring a specific
-            combination of structure and css files/rules declaration.
-          </p>
+          <ul>
+            <li>
+              Transitions rules & styles in section{" "}
+              <u><Link to="/stylevariables">Style Variables</Link></u>
+            </li>
+            <li>
+              Overview of Transition Components (files for more in-depth):
+            </li>
+            <ul>
+              <li>
+                Simple transitions{" "}
+                <u><Link to="/transition">Transition Component</Link></u>
+              </li>
+              <li>
+                Fully managable transitions{" "}
+                <u><Link to="/csstransition">CSSTransition Component</Link></u>
+              </li>
+              <li>
+                Related transitions{" "}
+                <u><Link to="/switchtransition">SwitchTransition Component</Link></u>
+              </li>
+              <li>
+                Transitions for lists{" "}
+                <u><Link to="/transitiongroup">TransitionGroup Component</Link></u>
+              </li>
+            </ul>
+          </ul>
 
-          <p>
-            For How-To documentation for each component navigate to its pages in
-            this site.
-          </p>
+          <section className={styles.article}>
+            <p className={styles.description}>
+              'Container Component' means that all the React Transition Group
+              Components will be used as wrappers, parents or containers for
+              those which the effect of the transitions should be applied.
+            </p>
+          </section>
 
           {/* Pros */}
           <article className={styles.article}>

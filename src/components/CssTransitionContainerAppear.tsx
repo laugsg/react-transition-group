@@ -7,7 +7,7 @@ import '../styles/csstransition.css'
  * CSS file should include two clasess *-appear & *-appear-active
  */
 
-export function CssTransitionComponentAppear() {
+export function CssTransitionContainerAppear() {
   const [inProp, setInProp] = React.useState(false);
   return (
     <div>
@@ -20,7 +20,7 @@ export function CssTransitionComponentAppear() {
           unmountOnExit
           >
           <div>
-            I'll appear by my-node-appear class and appear prop
+            Transition by default
           </div>
         </CSSTransition>
       </>
