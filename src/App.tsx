@@ -11,6 +11,7 @@ import Transition from './pages/transition';
 import CssTransition from './pages/csstransition';
 import SwitchTransition from './pages/switchtransition';
 import TransitionGroup from './pages/transitiongroup';
+import StyleVariables from './pages/stylevariables';
 
 export default function MainEntry() {
   return (
@@ -20,6 +21,7 @@ export default function MainEntry() {
       <Route path="/csstransition" element={<CssTransition/>}/>
       <Route path="/switchtransition" element={<SwitchTransition/>}/>
       <Route path="/transitiongroup" element={<TransitionGroup/>}/>
+      <Route path="/stylevariables" element={<StyleVariables/>}/>
     </Routes>
   );
 }
