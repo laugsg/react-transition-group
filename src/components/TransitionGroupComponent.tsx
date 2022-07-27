@@ -14,7 +14,7 @@ export function TodoList() {
     { id: Math.floor(Math.random() * 1000000), text: 'Fix the TV' },
   ]);
   return (
-    <div style={{ marginTop: '2rem' }}>
+    <div style={{ marginTop: '2rem', display: 'flex', flexFlow: 'column' }}>
       <ul style={{ marginBottom: '1rem' }}>
         <TransitionGroup className="todo-list">
           {items.map(({ id, text }) => (

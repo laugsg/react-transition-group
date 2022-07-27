@@ -19,13 +19,13 @@ export default function TransitionGroup() {
         It is a state machine for managing the mounting and unmounting of components over time.
         </p>
 
-        <article className={styles.article}>
+        <article className={styles.article} style={{textAlign:'left'}}>
           <h2>Use case</h2>
           <p>
           Items added/removed from a TodoList. 
           </p>
-        </article>
           <TodoList/>
+        </article>
       </main>
     </div>
   );
